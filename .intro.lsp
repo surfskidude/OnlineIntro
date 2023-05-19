@@ -19,7 +19,6 @@ local url=request:data'url'
 ?>
 <link rel="stylesheet" href="intro-style.css" />
 <link rel="stylesheet" href="online-style.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
 <h2>Online Lua and LSP Tutorials</h2>
 
@@ -37,7 +36,7 @@ local url=request:data'url'
 <p>If you prefer, you can also download and run the tutorials on your own computer. Check out the <a href="https://makoserver.net/documentation/manual/">Mako Server getting started guide</a> for more information. Thank you for your cooperation and understanding.</p>
 
 <div style="max-width:640px;margin:auto">
-<object style="width:100%" id="LuaREPL" type="image/svg+xml" data="images/LuaREPL.svg"></object>
+<object class="background-white" style="width:100%;padding: 10px;border-radius:10px;" id="LuaREPL" type="image/svg+xml" data="images/LuaREPL.svg"></object>
 </div>
 
 <p>It's important to note that the browser is only used as an editor and to display the results of your code. The actual processing takes place on the server side. When you click the 'Run' button, the Lua code example displayed in the browser is sent to the server to be parsed and executed. The server will then send the response back to the browser for display.</p>
