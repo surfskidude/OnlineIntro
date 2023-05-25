@@ -8,7 +8,6 @@ now = string.format("%02d:%02d",now.hour, now.min)
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/assets/css/intro-style.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 <title>Barracuda Application Server Tutorials</title>
 <script src="/rtl/jquery.js"></script>
 <script>
@@ -16,14 +15,35 @@ now = string.format("%02d:%02d",now.hour, now.min)
        $("#gotit").attr("action",location);
    });
 </script>
+<style>
+body.first-time {
+  padding-left: 0;
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  body.first-time {
+    padding-left: 0;
+    padding: 20px;
+  }
+}
+body.first-time #header {
+  grid-template-columns: 190px 1fr;
+}
+body.first-time #header #headertxt {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 34px;
+}
+</style>
 </head>
-<body>
+<body class="first-time">
 
 
 <div id="mainContainer">
   <div id="header">
     <img src="images/BAS-logo.png" />
-    <div id="headertxt">BAS Tutorials</div>
+    <div id="headertxt">Barracuda App Server Tutorials</div>
   </div>
   <div id="leftSidebar">
   </div>
@@ -38,13 +58,13 @@ now = string.format("%02d:%02d",now.hour, now.min)
 <p>Happy learning!</p>
 
 <div style="max-width:640px;margin:auto">
-<object style="width:100%" id="LuaREPL" type="image/svg+xml" data="images/LuaREPL.svg"></object>
+<object class="background-white" style="width:100%;padding: 10px;border-radius:10px;" id="LuaREPL" type="image/svg+xml" data="images/LuaREPL.svg"></object>
 </div>
   <?lsp end ?>
   <form id="gotit" method="POST" action="<?lsp=request:url()?>">
-     <button type="submit" style="font-weight:bold;color:white"><span style="font-size:140%">OK, got it!</span></button>
+     <button type="submit" class="btn primary">OK, got it!</button>
   </form>
-  <p><br><a href="/?url=<?lsp=request:uri()?>">No, I need more information!</a></p>
+  <p><br><a class="btn next" href="/?url=<?lsp=request:uri()?>">No, I need more information!</a></p>
 
 <div class="alert <?lsp= left< 4 and 'alert-danger' or (left < 6 and 'alert-warning' or 'alert-success')?>" style="font-size:120%;font-weight:bold">
 <p>Local server time: <?lsp=now?>.</p>
