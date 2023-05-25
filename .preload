@@ -46,7 +46,7 @@ dir:setfunc(function(_ENV,path)
          return false
       end
       local ext=path:match"[^%.^/]+$"
-      if( not (not ext or ext=="lsp") ) then return false end
+      if ext and ext ~= "lsp" then return false end
       if h["SimpleMQ"] or h["x-requested-with"] then return false end
       if path:find('/',2,true) then return false end
       local c = request:cookie"lsptutorial"

@@ -7,8 +7,7 @@ now = string.format("%02d:%02d",now.hour, now.min)
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="intro-style.css" />
-<link rel="stylesheet" href="online-style.css" />
+<link rel="stylesheet" href="/assets/css/intro-style.css" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 <title>Barracuda Application Server Tutorials</title>
 <script src="/rtl/jquery.js"></script>

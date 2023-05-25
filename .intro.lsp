@@ -17,8 +17,8 @@ local left = 60 - now.min
 now = string.format("%02d:%02d",now.hour, now.min)
 local url=request:data'url'
 ?>
-<link rel="stylesheet" href="intro-style.css" />
-<link rel="stylesheet" href="online-style.css" />
+<link rel="stylesheet" href="/assets/css/intro-style.css" />
+
 
 <h2>Online Lua and LSP Tutorials</h2>
 
